@@ -1,0 +1,20 @@
+.logo{
+	width: 30%;
+	height: 30%;
+}
+.text{
+	font-size: 40px;
+	padding-left: 200px;
+}
+.cart{
+	width: 70%;
+	height: 70%;
+}
+.containerr{
+	padding-top: 10px;
+}
+.product-container{
+	border: 2px solid grey;
+	text-align: center;
+	margin-bottom: 30px;
+}
