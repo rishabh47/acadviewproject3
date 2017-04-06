@@ -1,52 +1,147 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Online Shopping Site - Shop for Men, Women &amp; Kids Fashion - Myntra</title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/style.css">
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-	<script src="js/index.js" ></script>
-</head>
-<body>
-<header class="containerr">
-	<div class="row-header">
-		<div class="col-md-3  col-xs-3">
-			<img class="logo" src="https://qph.ec.quoracdn.net/main-qimg-f023a19736bbbf2543613b3d857ddc04-c">
+	<head>
+		<title>Online Shopping Site - Shop for Men, Women &amp; Kids Fashion - Myntra</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		 crossorigin="anonymous"></script>
+		<script src="js/index.js" ></script>
+		<meta charset="utf-8">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<header class="containerr">
+			<div class="row">
+				<div class="col-md-3  col-xs-3">
+					<img class="logo" src="https://qph.ec.quoracdn.net/main-qimg-f023a19736bbbf2543613b3d857ddc04-c">
+				</div>
+				<div class="col-md-6  col-xs-6 text">MYNTRA</div>
+				<div class="col-md-1 col-md-offset-2  col-xs-2 cartt">
+					<button type="button" data-toggle="modal" data-target="#myModal">
+						<img class="cart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2000px-Shopping_cart_icon.svg.png">
+					</button>
+				</div>
+			</div>
+		</header>
+		<div class="row  container second-section">
+			<div class="col-md-3 col-xs-2 lines">
+				<div id="mySidenav" class="sidenav" data-dismiss="sidenav">
+  					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					<a href="#">Home</a>
+					<a href="#">All</a>
+					<a href="#">Men's</a>
+					<a href="#">Women's</a>
+					<a href="#">Kid's</a>
+					<a href="#">Cart</a>
+					<a href="#">About Us</a>
+					<a href="#">Contact Us</a>
+				</div>
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			</div>
+			<div class="col-md-6 col-xs-6"> 
+				<input class="search-box" type="text" name="search" placeholder="Search...">
+				
+			</div>
+			<div class="col-md-2 col-md-offset-1 col-xs-3">
+				<button type="button">Search</button>
+				<button type="button">Sell</button>
+			</div>
 		</div>
-		<div class="col-md-6  col-xs-6 text">
-		MYNTRA
+		<div class="row">
+			<div class=" container product-container-parent">
+			</div>
 		</div>
-		<div class="col-md-1 col-md-offset-2  col-xs-2">
-			<img class="cart" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2000px-Shopping_cart_icon.svg.png">
+		<ul class=" container pagination pagination-sm">
+		  <li><a >1</a></li>
+		  <li><a >2</a></li>
+		  <li><a >3</a></li>
+		  <li><a >4</a></li>
+		  <li><a >5</a></li>
+		</ul>	
+		  <!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+       				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+       				 <h4 class="modal-title">Cart</h4>
+     			 </div>
+		        	<div class="modal-body">
+		          		<form role="form">
+			            	<div class="form-group">
+			              		<label for="Name"><span class="glyphicon glyphicon-user"></span> Name </label>
+			              		<input type="text" class="form-control" id="name" placeholder="Enter Name" required="required">
+			            	</div>
+			            	<div class="form-group">
+				              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email </label>
+				              <input type="text" class="form-control" id="usrname" placeholder="Enter email" required="required">
+				            </div>
+				            <div class="form-group">
+				              <label for="phno"><span class="glyphicon glyphicon-phone"></span> Phone Number</label>
+				              <input type="number" class="form-control" id="phno" placeholder="Enter Phone Number" required="required">
+				            </div>
+				            <div class="form-group">
+				              <label for="address"><span class="glyphicon glyphicon-user"></span> Enter Address</label>
+				              <input type="address" class="form-control" id="address" placeholder="Enter Address" required="required">
+				            </div>
+			          	</form>
+			          	<div class="container tble">          
+						  	<table class="table table-hover">
+							    <thead>
+							      	<tr>
+							        	<th>Item</th>
+							        	<th>Quantity</th>
+							        	<th>Price</th>
+							        	<th>Amount</th>
+							      	</tr>
+							    </thead>
+							    <tbody>
+							     	<tr>
+							       		 <td>John</td>
+							       		 <td>Doe</td>
+							       		 <td>joh</td>
+							      	</tr>
+							      	<tr>
+							        	<td>Mary</td>
+							        	<td>Moe</td>
+							        	<td>mary</td>
+							      	</tr>
+							     	<tr>
+							        	<td>July</td>
+							        	<td>Dooley</td>
+							        	<td>july</td>
+							      	</tr>
+							    </tbody>
+						 	</table>
+						</div>
+		        	</div>
+		        	<div class="modal-footer">
+		          		<button type="submit" class=" cancel btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+		          		<button type="button" data-toggle="modal" data-target="#payModal" class="pay-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-phone"></span> Pay </button>
+		        	</div>
+		      	</div>
+		    </div>
+		</div> 
+		<div class="modal fade" id="payModal" role="dialog">
+		    <div class="modal-dialog1">
+		      <!-- Modal content-->
+			    <div class="modal-content">
+			     	<div class="modal-header">
+       					<button type="button" class="close" data-dismiss="modal">&times;</button>
+       				 	<h4 class="modal-title1">Order</h4>
+       				 	<p class="order-place">Your order has been placed successfully!</p>
+       				 	<button type="submit" class="Okay btn btn-default btn-default pull-right" data-dismiss="modal"><span></span>Okay</button>
+     			 	</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</header>
-<div class="row">
-	
-</div>
-<div class="row">
-	
-<div class="container">
-
-</div>
-<div>
-<ul class="pagination pagination-sm">
-  <li><a href="#">1</a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-</ul>	
-</div>
-</body>
+	</body>
 </html>
