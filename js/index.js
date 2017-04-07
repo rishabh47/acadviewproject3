@@ -25,6 +25,16 @@ function getProductList(pgno) {
 				var productContainer = $('<div class="product-container col-md-3 col-md-offset-1 "></div>').append(imageTag,productNameTag,brandTag,priceTag,cart);
 				$('.product-container-parent').append(productContainer);
 
+				$(cart).click(function(){
+					var pn = $($(this).parent().find(".product-name")).text();
+					var p = $($(this).parent().find(".price")).text();
+					var td1 = $('<td></td>').text(pn);
+					var td2 = $('<td></td>').html("<input type='number' value='1'>");
+					var td3 = $('<td></td>').text(p);
+					var td4 = $('<td></td>').text(p);
+					var tableRow = $('<tr></tr>').append(td1, td2, td3, td4);
+					$('.table-heading').after(tableRow);
+				});
 			});
 		}
 	});

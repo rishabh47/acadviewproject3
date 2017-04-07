@@ -6,13 +6,8 @@
 	font-size: 40px;
 	padding-left: 200px;
 }
-.cart{
-	width: 70%;
-	height: 70%;
-	outline: none;
-	padding: 0;
-border: none;
-background: none;
+.cartt{
+	margin-left: 200px;
 }
 .containerr{
 	padding-top: 10px;
@@ -76,21 +71,7 @@ body{
     	margin-top: 50px;
     	margin-bottom: 50px;
     }
-.box-shadow-menu {
-  position: relative;
-}
-.box-shadow-menu:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  width: 1.0em;
-  height: 0.15em;
-  background: black;
-  box-shadow: 
-    0 0.25em 0 0 black,
-    0 0.5em 0 0 black;
-}
+
 .second-section{
 	height: 50px;
 	width: 1400px;
@@ -145,6 +126,29 @@ input[name=search]:focus {
     font-size: 36px;
     margin-left: 50px;
 }
+.add{
+	    width: 200px;
+    margin-right: 199px;
+}
+.choose{
+	margin: 20px 0px;
+}
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+      height: 200px;
+  }
+
+.img-carousel{
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
 @media(max-width: 414px){
 	.text{
 		text-align: center;
