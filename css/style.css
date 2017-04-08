@@ -3,14 +3,22 @@
 	height: 30%;
 }
 .text{
-	font-size: 40px;
-	padding-left: 200px;
-}
+	font-size: 30px;
+	padding-left: 270px;
+    color: white;
+    padding-top: 15px;
+    }
 .cartt{
 	margin-left: 200px;
+    padding-top: 17px;
 }
 .containerr{
 	padding-top: 10px;
+    background-color: #1976D2;
+
+}
+.product-container-parent{
+    margin-left: 40px;
 }
 .product-container{
 	border: 2px solid grey;
@@ -28,6 +36,8 @@
 }
 body{
 	overflow-x: hidden;
+}
+header{
 }
  .Table
     {
@@ -71,11 +81,17 @@ body{
     	margin-top: 50px;
     	margin-bottom: 50px;
     }
+    .search-box-conatiner{
+        margin-top: 10px;
+    }
+    .search-sell-button{
+        margin-top: 12px;
+    }
 
 .second-section{
 	height: 50px;
 	width: 1400px;
-	margin-top: 15px;
+	margin-top: 0px;
 }
 .menu {
     width: 35px;
@@ -83,6 +99,25 @@ body{
     background-color: black;
     margin: 6px 0;
 }
+.page-content{
+background: url("https://s-media-cache-ak0.pinimg.com/originals/02/e1/b8/02e1b8bd40491ceb35b42665b8385fc4.jpg");
+background-size: cover;
+height: 528px;
+}
+.page-heading{
+    margin-top: 64px;
+    text-align: center;
+    font-size: 48px;
+}
+.page-description{
+    margin-top: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    color: black;
+    padding-left: 20%;
+}
+
 input[name=search ] {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -137,11 +172,15 @@ input[name=search]:focus {
   .carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
-      height: 200px;
+      height: 500px;
   }
 
 .img-carousel{
 	margin-bottom: 30px;
+    background: url("https://static.pexels.com/photos/195884/pexels-photo-195884.jpeg");
+    margin-left: 0;
+    margin-right: 0;
+    width: 1300px;
 }
 
 

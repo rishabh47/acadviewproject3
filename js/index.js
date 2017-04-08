@@ -1,13 +1,5 @@
-function getProductList(pgno) {
-	$.ajax({ 
-		url:"http://acadprojects.com/py/fabricKart/sort/items",
-		type:'GET',
-		data: {
-			"sort_by": "relevance",
-			"page": pgno
-		},
-		success: function(response){
-			$('.product-container-parent').empty();
+function fillProduct(response) {
+		$('.product-container-parent').empty();
 			console.log(response);
 			var data = response["data"];
 			data.forEach(function(product,index)
@@ -37,6 +29,17 @@ function getProductList(pgno) {
 				});
 			});
 		}
+function getProductList(pgno) {
+	$.ajax({ 
+		url:"http://acadprojects.com/py/fabricKart/sort/items",
+		type:'GET',
+		data: {
+			"sort_by": "relevance",
+			"page": pgno
+		},
+		success: function(response){
+			fillProduct(response);
+		}
 	});
 
 }
@@ -46,6 +49,72 @@ $(document).ready(function(){
 	$('.pagination li').click(function () {
 		var pgno = parseInt($(this).text());
 		getProductList(pgno-1);
+	});
+	$('.search-button').click(function (argument) {
+		var searchQuery = $('.search-box').val();
+		$.ajax({
+			url: "http://acadprojects.com/py/fabricKart/filter/items",
+			type: "POST",
+			beforeSend: function (arg) {
+				arg.setRequestHeader("content-type", "application/json");
+			},
+			data: JSON.stringify({
+				"page":0,
+				"filters":[
+				{
+					"name":"brand",
+					"value":[searchQuery]
+				}
+				]
+		}),
+		success: function (argume) {
+			fillProduct(argume);
+		}
+		});
+	});
+	$('.search-button').click(function (argument) {
+		var searchQuery = $('.search-box').val();
+		$.ajax({
+			url: "http://acadprojects.com/py/fabricKart/filter/items",
+			type: "POST",
+			beforeSend: function (arg) {
+				arg.setRequestHeader("content-type", "application/json");
+			},
+			data: JSON.stringify({
+				"page":0,
+				"filters":[
+				{
+					"name":"item_category",
+					"value":[searchQuery]
+				}
+				]
+		}),
+		success: function (argume) {
+			fillProduct(argume);
+		}
+		});
+	});
+	$('.search-button').click(function (argument) {
+		var searchQuery = $('.search-box').val();
+		$.ajax({
+			url: "http://acadprojects.com/py/fabricKart/filter/items",
+			type: "POST",
+			beforeSend: function (arg) {
+				arg.setRequestHeader("content-type", "application/json");
+			},
+			data: JSON.stringify({
+				"page":0,
+				"filters":[
+				{
+					"name":"item_name",
+					"value":[searchQuery]
+				}
+				]
+		}),
+		success: function (argume) {
+			fillProduct(argume);
+		}
+		});
 	});
 });
 function openNav() {
