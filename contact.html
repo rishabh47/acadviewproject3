@@ -2,10 +2,16 @@
 <html>
 	<head>
 		<title>Online Shopping Site - Shop for Men, Women &amp; Kids Fashion - Myntra</title>
-		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview" type="image/x-icon">
+		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview"" type="image/x-icon">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
 		<link rel="stylesheet" href="css/style.css">
+		<!--Script for google map-->
+    	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYMpAUibhMihF1pLD-zbHbWXepnd69jss&callback=initMap">
+    	</script>
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
@@ -53,57 +59,31 @@
 				</div>
 			</div>
 		</header>	
-		<div class="container img-carousel">
-			<br>
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			   	<!-- Indicators -->
-				<ol class="carousel-indicators">
-				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				    <li data-target="#myCarousel" data-slide-to="1"></li>
-				    <li data-target="#myCarousel" data-slide-to="2"></li>
-				    <li data-target="#myCarousel" data-slide-to="3"></li>
-				</ol>
-			    <!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-			  			<img class="carousel-1" src="https://static.pexels.com/photos/199183/pexels-photo-199183.jpeg">
-					</div>
-				   	<div class="item">
-			    		<img class="carousel-2" src="https://static.pexels.com/photos/203232/pexels-photo-203232.jpeg">
-			    	</div>
-			    	<div class="item">
-			    		<img class="carousel-3" src="https://static.pexels.com/photos/42423/pexels-photo-42423.jpeg">
-			    	</div>
-				    <div class="item">
-			    		<img class="carousel-4" src="https://static.pexels.com/photos/170294/pexels-photo-170294.jpeg">
-			    	</div>
-		    	</div>
-				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				 	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			    	<span class="sr-only">Previous</span>
-			    </a>
-			    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			    	<span class="sr-only">Next</span>
-			    </a>
-			</div>
-		</div>
-		<div class="row api" id="api">
-			<div class=" container product-container-parent">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-5">
-			</div>
-			<ul class="col-md-3 container pagination pagination-sm">
-			  <li><a >1</a></li>
-			  <li><a >2</a></li>
-			  <li><a >3</a></li>
-			  <li><a >4</a></li>
-			  <li><a >5</a></li>
-			</ul>	
-		</div>
+        <main class="mdl-layout__content">
+            <div class="page-conten">
+                <div class="col-md-12 page-heading">Contact Us</div>
+                <div class="col-md-6 contact-section">
+                    <div class="sub-heading">Toll Free Number</div>
+                    <div class="contact-desc">1800-9999-999</div>
+                    <div class="sub-heading">Mail Us At</div>
+                    <div class="contact-desc">itsdifferent47@gmail.com</div>
+                    <div class="sub-heading">Follow Us</div>
+                    <div class="row icon-container">
+                        <div class="col-md-offset-4 col-md-2 facebook">
+                            <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-256.png" width="50px">
+                        </div>
+                        <div class="col-md-2 twitter">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/220px-Twitter_bird_logo_2012.svg.png" width="50px">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 map-section">
+                    <div class="col-md-8 sub-heading">Address</div>
+                    <div class="col-md-8 contact-desc">JECRC University,IS 2036 to 2039, Tuwariyan Ki Dhani, Vidhani, Rajasthan 303905</div>
+                    <div class="col-md-12" id="map"></div>
+                </div>
+            </div>
+        </main>
 		  <!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">
 		    <div class="modal-dialog">
@@ -112,7 +92,7 @@
 			      <div class="modal-header">
        				 <button type="button" class="close" data-dismiss="modal">&times;</button>
        				 <h4 class="modal-title">Cart</h4>
-     			 </div>
+     			</div>
 		        	<div class="modal-body">
 		          		<form role="form">
 			            	<div class="form-group">
@@ -256,6 +236,7 @@
 		        			</div>
 			          	</form>
 			        </div>
+			    </div>
 			</div>
 		</div>	    
    	</body>
