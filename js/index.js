@@ -8,13 +8,22 @@ function fillProduct(response) {
 				var image = product["image"];
 				var brand = product["brand"];
 				var price = product["price"];
+				var desc = product["description"];
+				var qty = product["quantity"];
+				var size = product["size"];
+				var sold = product["sold_by"];
+
 
 				var productNameTag = $('<div class="product-name "></div>').html(productName);
 				var imageTag = $('<img class ="imgg"width="150px" height= "200px">').attr("src",image);
 				var brandTag = $('<div class="brand"></div>').html(brand);
 				var priceTag = $('<div class="price"></div>').html(price);
-				var cart = $('<img class="small-cart" height ="20px" width="20px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2000px-Shopping_cart_icon.svg.png">')
-				var productContainer = $('<div class="product-container col-md-3 col-md-offset-1 "></div>').append(imageTag,productNameTag,brandTag,priceTag,cart);
+				var descTag = $('<div class="description"></div>').html(desc);
+				var qtyTag = $('<div class="quantity"></div>').html(qty);
+				var sizeTag = $('<div class="size"></div>').html(size);
+				var soldTag = $('<div class="sold-by"></div>').html(sold);
+				var cart = $('<img class="small-cart" height ="20px" width="20px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2000px-Shopping_cart_icon.svg.png">');
+				var productContainer = $('<div class="product-container col-md-3 col-md-offset-1 "></div>').append(imageTag,productNameTag,brandTag,priceTag,descTag,qtyTag,sizeTag,soldTag,cart);
 				$('.product-container-parent').append(productContainer);
 
 				$(cart).click(function(){
@@ -32,12 +41,20 @@ function fillProduct(response) {
 				      	var imgSrc = $($(this).find('.imgg')).attr("src");
 				      	var brand = $($(this).find('.brand')).html();
 				      	var price = $($(this).find('.price')).html();
+				      	var desc = $($(this).find('.description')).html();
+				      	var qty = $($(this).find('.quantity')).html();
+				      	var size = $($(this).find('.size')).html();
+				      	var sold = $($(this).find('.sold-by')).html();
 				      	localStorage.setItem("productName", name);
 				      	localStorage.setItem("imageSrc", imgSrc);
 				      	localStorage.setItem("brand", brand);
 				      	localStorage.setItem("price", price);
+				      	localStorage.setItem("description", desc);
+				      	localStorage.setItem("quantity", qty);
+				      	localStorage.setItem("size", size);
+				      	localStorage.setItem("sold-by", sold);
 				      	window.location.href = "product.html";
-      				});
+      				} );
 			});
 		}
 function getProductList(pgno) {

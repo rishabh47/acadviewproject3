@@ -219,6 +219,16 @@ input[name=search]:focus {
     background: grey;
     display: block;
 }
+#name-heading{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-left: 65px;
+    padding-top: 30px;
+}
+#img-product{
+    padding-left: 120px;
+    padding-top: 50px;
+}
 
 
 
