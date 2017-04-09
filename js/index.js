@@ -27,6 +27,17 @@ function fillProduct(response) {
 					var tableRow = $('<tr></tr>').append(td1, td2, td3, td4);
 					$('.table-heading').after(tableRow);
 				});
+				     $(productContainer).click(function(){
+				      	var name = $($(this).find('.product-name')).html();
+				      	var imgSrc = $($(this).find('.imgg')).attr("src");
+				      	var brand = $($(this).find('.brand')).html();
+				      	var price = $($(this).find('.price')).html();
+				      	localStorage.setItem("productName", name);
+				      	localStorage.setItem("imageSrc", imgSrc);
+				      	localStorage.setItem("brand", brand);
+				      	localStorage.setItem("price", price);
+				      	window.location.href = "product.html";
+      				});
 			});
 		}
 function getProductList(pgno) {
@@ -116,6 +127,7 @@ $(document).ready(function(){
 		}
 		});
 	});
+
 });
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -135,3 +147,4 @@ function closeNav() {
           map: map
         });
       }
+ 

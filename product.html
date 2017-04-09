@@ -2,16 +2,10 @@
 <html>
 	<head>
 		<title>Online Shopping Site - Shop for Men, Women &amp; Kids Fashion - Myntra</title>
-		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview"" type="image/x-icon">
+		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview" type="image/x-icon">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-
 		<link rel="stylesheet" href="css/style.css">
-		<!--Script for google map-->
-    	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYMpAUibhMihF1pLD-zbHbWXepnd69jss&callback=initMap">
-    	</script>
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
@@ -19,6 +13,7 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 		 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		 crossorigin="anonymous"></script>
+		<script src="js/product.js" ></script>
 		<script src="js/index.js" ></script>
 		<meta charset="utf-8">
  		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,10 +21,10 @@
 	<body>
 		<header class="containerr">
 			<div class="row">
-				<div class="col-md-3  col-xs-3 logo-myntra">
+				<div class="col-md-3  col-xs-3">
 					<img class="logo" href="#" src="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview">
 				</div>
-				<div class="col-md-6  col-xs-4 text">MYNTRA</div>
+				<div class="col-md-6  col-xs-6 text">MYNTRA</div>
 				<div class="col-md-1 col-md-offset-1  col-xs-2 cartt">
 					<button type="button" data-toggle="modal" data-target="#myModal" class="sell-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>
 					</button>
@@ -59,33 +54,22 @@
 				</div>
 			</div>
 		</header>	
-        <main class="mdl-layout__content">
-            <div class="page-conten">
-                <div class="col-md-12 page-heading">Contact Us</div>
-                <div class="col-md-6 contact-section">
-                    <div class="sub-heading">Toll Free Number</div>
-                    <div class="contact-desc">1800-9999-999</div>
-                    <div class="sub-heading">Mail Us At</div>
-                    <div class="contact-desc">itsdifferent47@gmail.com</div>
-                    <div class="sub-heading">Follow Us</div>
-                    <div class="row icon-container">
-                        <div class="col-md-offset-4 col-md-2 facebook">
-                            <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/facebook_circle_color-256.png" width="50px">
-                        </div>
-                        <div class="col-md-2 twitter">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/220px-Twitter_bird_logo_2012.svg.png" width="50px">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 map-section">
-                    <div class="col-md-8 sub-heading">Address</div>
-                    <div class="col-md-8 contact-desc">JECRC University,IS 2036 to 2039, Tuwariyan Ki Dhani, Vidhani, Rajasthan 303905</div>
-                    <div class="col-md-12" id="map"></div>
-                </div>
-                
-            </div>
-        </main>
-		  <!-- Modal -->
+		<div class="row heading">
+		<h1>Product</h1>		
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="product-img	">
+					<img>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="product-name"></div>
+				<div class="brand"></div>
+				<div class="price"></div>
+			</div>
+		</div>
+		 <!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">
 		    <div class="modal-dialog">
 		      <!-- Modal content-->
@@ -93,7 +77,7 @@
 			      <div class="modal-header">
        				 <button type="button" class="close" data-dismiss="modal">&times;</button>
        				 <h4 class="modal-title">Cart</h4>
-     			</div>
+     			 </div>
 		        	<div class="modal-body">
 		          		<form role="form">
 			            	<div class="form-group">
@@ -237,8 +221,7 @@
 		        			</div>
 			          	</form>
 			        </div>
-			    </div>
 			</div>
-		</div>	    
+		</div>	  
    	</body>
 </html>
