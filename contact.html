@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>Online Shopping Site - Shop for Men, Women &amp; Kids Fashion - Myntra</title>
-		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview"" type="image/x-icon">
+		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview" type="image/x-icon">
+		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<!-- jQuery library -->
@@ -12,6 +13,9 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 		 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		 crossorigin="anonymous"></script>
+		     <script async defer
+    		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYMpAUibhMihF1pLD-zbHbWXepnd69jss&callback=initMap">
+    		</script>
 		 <meta charset="utf-8">
 		 <script src="js/index.js" ></script>
  		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +28,7 @@
 				</div>
 				<div class="col-md-6  col-xs-4 text">MYNTRA</div>
 				<div class="col-md-1 col-md-offset-1  col-xs-2 cartt">
-					<button type="button" data-toggle="modal" data-target="#myModal" class="sell-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>
+					<button type="button" data-toggle="modal" data-target="#myModal" class="sellbutton btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>
 					</button>
 				</div>
 			</div>
@@ -33,7 +37,7 @@
 					<div id="mySidenav" class="sidenav" data-dismiss="sidenav">
 	  					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 						<a href="index.html">Home</a>
-						<a href="#">All</a>
+						<a href="index.html">All</a>
 						<a href="#">Men's</a>
 						<a href="#">Women's</a>
 						<a href="#">Kid's</a>
@@ -47,8 +51,8 @@
 					<input class="search-box" type="text" name="search" placeholder="Search...">
 				</div>
 				<div class="col-md-2 col-md-offset-1 col-xs-3 search-sell-button">
-					<button type="button" class="search-button">Search</button>
-					<button type="button" data-toggle="modal" data-target="#sellModal">Sell</button>
+					<button type="button" class="search-button btn btn-info">Search</button>
+					<button type="button" class="sell-button btn btn-info" data-toggle="modal" data-target="#sellModal">Sell</button>
 				</div>
 			</div>
 		</header>	
@@ -78,6 +82,12 @@
                 
             </div>
         </main>
+        <div class="row">
+			<div class="col-md-8"></div>
+			<div class="col-md-4">
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			</div>
+		</div>
 		  <!-- Modal -->
 		<div class="modal fade" id="myModal" role="dialog">
 		    <div class="modal-dialog">
@@ -226,7 +236,7 @@
 				            </div>
 				            <div class="modal-footer">
 		          				<button type="submit" class=" cancel btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
-		          				<button type="submit" class="sell-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-phone"></span> Sell </button>
+		          				<button type="submit" class="selll-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-phone"></span> Sell </button>
 		        			</div>
 			          	</form>
 			        </div>

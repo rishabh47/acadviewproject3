@@ -18,10 +18,10 @@ function fillProduct(response) {
 				var imageTag = $('<img class ="imgg"width="150px" height= "200px">').attr("src",image);
 				var brandTag = $('<div class="brand"></div>').html(brand);
 				var priceTag = $('<div class="price"></div>').html(price);
-				var descTag = $('<div class="description"></div>').html(desc);
-				var qtyTag = $('<div class="quantity"></div>').html(qty);
-				var sizeTag = $('<div class="size"></div>').html(size);
-				var soldTag = $('<div class="sold-by"></div>').html(sold);
+				var descTag = $('<div class="description hidden"></div>').html(desc);
+				var qtyTag = $('<div class="quantity hidden"></div>').html(qty);
+				var sizeTag = $('<div class="size hidden"></div>').html(size);
+				var soldTag = $('<div class="sold-by hidden"></div>').html(sold);
 				var cart = $('<img class="small-cart" height ="20px" width="20px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Shopping_cart_icon.svg/2000px-Shopping_cart_icon.svg.png">');
 				var productContainer = $('<div class="product-container col-md-3 col-md-offset-1 "></div>').append(imageTag,productNameTag,brandTag,priceTag,descTag,qtyTag,sizeTag,soldTag,cart);
 				$('.product-container-parent').append(productContainer);
@@ -71,6 +71,9 @@ function getProductList(pgno) {
 	});
 
 }
+$('.search-button').click(function (argument){
+	getProductList(pgno);
+})
 
 $(document).ready(function(){
 	getProductList(0);

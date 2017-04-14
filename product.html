@@ -5,7 +5,7 @@
 		<link rel="icon" href="https://assets.materialup.com/uploads/951ea858-5d24-4aa6-8408-53da9774ccfb/preview" type="image/x-icon">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/product.css">
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
@@ -26,7 +26,7 @@
 				</div>
 				<div class="col-md-6  col-xs-6 text">MYNTRA</div>
 				<div class="col-md-1 col-md-offset-1  col-xs-2 cartt">
-					<button type="button" data-toggle="modal" data-target="#myModal" class="sell-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>
+					<button type="button" data-toggle="modal" data-target="#myModal" class="sellbutton btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-shopping-cart"></span>
 					</button>
 				</div>
 			</div>
@@ -35,7 +35,7 @@
 					<div id="mySidenav" class="sidenav" data-dismiss="sidenav">
 	  					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 						<a href="index.html">Home</a>
-						<a href="#">All</a>
+						<a href="index.html">All</a>
 						<a href="#">Men's</a>
 						<a href="#">Women's</a>
 						<a href="#">Kid's</a>
@@ -49,8 +49,8 @@
 					<input class="search-box" type="text" name="search" placeholder="Search...">
 				</div>
 				<div class="col-md-2 col-md-offset-1 col-xs-3 search-sell-button">
-					<button type="button" class="search-button">Search</button>
-					<button type="button" data-toggle="modal" data-target="#sellModal">Sell</button>
+					<button type="button" class="search-button btn btn-info">Search</button>
+					<button type="button" class="sell-button btn btn-info" data-toggle="modal" data-target="#sellModal">Sell</button>
 				</div>
 			</div>
 		</header>	
@@ -61,18 +61,31 @@
 			</div>		
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div class="product-img" id="img-product">
 					<img>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-2 headers">
+				<h3> Brand Name:</h3>
+				<h3> Description:</h3>
+				<h3 class="sold-byy"> Sold By:</h3>
+				<h3> Quantity:</h3>
+				<h3> Size:</h3>
+			</div>
+			<div class="col-md-6 content">
 				<div class="brand"></div>
 				<div class="description"></div>
 				<div class="sold"></div>
 				<div class="quantity"></div>
 				<div class="size"></div>
 				<div class="price"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"></div>
+			<div class="col-md-4">
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="400" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 			</div>
 		</div>
 		 <!-- Modal -->
@@ -223,7 +236,7 @@
 				            </div>
 				            <div class="modal-footer">
 		          				<button type="submit" class=" cancel btn btn-default btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close</button>
-		          				<button type="submit" class="sell-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-phone"></span> Sell </button>
+		          				<button type="submit" class="selll-button btn btn-default btn-default pull-right"><span class="glyphicon glyphicon-phone"></span> Sell </button>
 		        			</div>
 			          	</form>
 			        </div>

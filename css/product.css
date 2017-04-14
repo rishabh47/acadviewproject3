@@ -96,7 +96,32 @@ body{
     .search-sell-button{
         margin-top: 5px;
     }
-
+    .sold{
+        padding-top: 5px;
+    }
+    .sold-byy{
+        margin-top: 30px
+    }
+    .quantity{
+        padding-top: 20px;
+    }
+    .size{
+        padding-top: 20px;
+    }
+    .price{
+        padding-top: 50px;
+    }
+    .headers{
+        padding-top: 40px;
+        padding-right: 0px;
+    }
+    .content{
+        padding-top: 65px;
+        font-size: 18px;
+    }
+    .description{
+        padding-top: 20px;
+    }
 .second-section{
 	height: 50px;
 	width: 1400px;
@@ -223,8 +248,8 @@ input[name=search]:focus {
 #map{
     margin-left: 10%;
     margin-top: 32px;
-    height: 220px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     background: grey;
     display: block;
 }
@@ -238,9 +263,7 @@ input[name=search]:focus {
     padding-left: 120px;
     padding-top: 50px;
 }
-.fb-meta{
-    padding-top: 100px;
-}
+
 
 
 
