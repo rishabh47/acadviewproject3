@@ -30,21 +30,28 @@ function fillProduct(response) {
 					var pn = $($(this).parent().find(".product-name")).text();
 					var p = $($(this).parent().find(".price")).text();
 					var td1 = $('<td></td>').text(pn);
-					var td2 = $('<td></td>').html("<input type='number' value='1'>");
+					var td2 = $('<td></td>').html("<input class='qtyy' type='number' value='1'>");
 					var td3 = $('<td></td>').text(p);
-					var td4 = $('<td></td>').text(p);
+					var td4 = $('<td></td>').text(total);
 					var tableRow = $('<tr></tr>').append(td1, td2, td3, td4);
 					$('.table-heading').after(tableRow);
-				});
-				     $(productContainer).click(function(){
-				      	var name = $($(this).find('.product-name')).html();
-				      	var imgSrc = $($(this).find('.imgg')).attr("src");
-				      	var brand = $($(this).find('.brand')).html();
-				      	var price = $($(this).find('.price')).html();
-				      	var desc = $($(this).find('.description')).html();
-				      	var qty = $($(this).find('.quantity')).html();
-				      	var size = $($(this).find('.size')).html();
-				      	var sold = $($(this).find('.sold-by')).html();
+ 				});
+				$('.qtyy').keyup(function(){
+ 
+  					var qty = $('.qtyy').val();
+					var price = p
+					var total = price * qty;
+					});
+
+				   $(imageTag).click(function(){
+				      	var name = $($(this).parent().find('.product-name')).html();
+				      	var imgSrc = $($(this).parent().find('.imgg')).attr("src");
+				      	var brand = $($(this).parent().find('.brand')).html();
+				      	var price = $($(this).parent().find('.price')).html();
+				      	var desc = $($(this).parent().find('.description')).html();
+				      	var qty = $($(this).parent().find('.quantity')).html();
+				      	var size = $($(this).parent().find('.size')).html();
+				      	var sold = $($(this).parent().find('.sold-by')).html();
 				      	localStorage.setItem("productName", name);
 				      	localStorage.setItem("imageSrc", imgSrc);
 				      	localStorage.setItem("brand", brand);
@@ -71,16 +78,17 @@ function getProductList(pgno) {
 	});
 
 }
+$('.logo-myntra').click(function(response){
+	getProductList(pgno);
+});
+
 $('.search-button').click(function (argument){
 	getProductList(pgno);
-})
+});
 
 $(document).ready(function(){
 	getProductList(0);
-	$('.pagination li').click(function () {
-		var pgno = parseInt($(this).text());
-		getProductList(pgno-1);
-	});
+
 	$('.search-button').click(function (argument) {
 		var searchQuery = $('.search-box').val();
 		$.ajax({
@@ -147,6 +155,10 @@ $(document).ready(function(){
 		}
 		});
 	});
+		$('.pagination li').click(function () {
+		var pgno = parseInt($(this).text());
+		getProductList(pgno-1);
+	});
 
 });
 function openNav() {
@@ -167,4 +179,3 @@ function closeNav() {
           map: map
         });
       }
- 

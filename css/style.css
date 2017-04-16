@@ -3,15 +3,15 @@
 	height: 30%;
 }
 .search-button{
-    background-color: pink;
+    background-color: #FF00FF;
     border-radius: 10px;
-    color: grey;
+    color: black;
 }
 
 .sell-button{
-    background-color: pink;
+    background-color: #FF00FF;
     border-radius: 10px;
-    color: grey;
+    color: black;
 }
 .text{
 	font-size: 30px;
@@ -214,6 +214,7 @@ input[name=search]:focus {
 }
 .map-section{
     text-align: center;
+    height: 400px;
 }
 .twitter{
     padding-left: 0px;
@@ -223,7 +224,7 @@ input[name=search]:focus {
 #map{
     margin-left: 10%;
     margin-top: 32px;
-    height: 220px;
+    height: 190px;
     width: 250px;
     background: grey;
     display: block;
