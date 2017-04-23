@@ -33,6 +33,7 @@
 }
 .product-container{
 	border: 2px solid grey;
+    border-radius: 150px;
 	text-align: center;
 	margin-bottom: 30px;
 }

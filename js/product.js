@@ -1,4 +1,5 @@
 	$(document).ready(function () {
+
 		var name = localStorage.getItem("productName");
 		var imgSrc = localStorage.getItem("imageSrc")
       	var brand = localStorage.getItem("brand");
@@ -15,4 +16,6 @@
             $('.quantity').text(qty);
             $('.size').text(size);
             $('.sold').text(sold);	
-	});	
+	
+});
+

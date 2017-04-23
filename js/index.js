@@ -30,19 +30,21 @@ function fillProduct(response) {
 					var pn = $($(this).parent().find(".product-name")).text();
 					var p = $($(this).parent().find(".price")).text();
 					var td1 = $('<td></td>').text(pn);
-					var td2 = $('<td></td>').html("<input class='qtyy' type='number' value='1'>");
+					var td2 = $('<td></td>').html("<input class='qtyy' type='text' value='1'>");
 					var td3 = $('<td></td>').text(p);
-					var td4 = $('<td></td>').text(total);
+					var total;
+					$('.qtyy').keyup(function(){
+ 
+  					var qty = $('.qtyy').val();
+  					console.log(qty);
+					p = ($($(this).parent().find(".price")).text())*qty;
+					});
+
+					var td4 = $('<td></td>').text(p);
 					var tableRow = $('<tr></tr>').append(td1, td2, td3, td4);
 					$('.table-heading').after(tableRow);
  				});
-				$('.qtyy').keyup(function(){
- 
-  					var qty = $('.qtyy').val();
-					var price = p
-					var total = price * qty;
-					});
-
+				
 				   $(imageTag).click(function(){
 				      	var name = $($(this).parent().find('.product-name')).html();
 				      	var imgSrc = $($(this).parent().find('.imgg')).attr("src");
@@ -103,6 +105,69 @@ $(document).ready(function(){
 				{
 					"name":"brand",
 					"value":[searchQuery]
+				}
+				]
+		}),
+		success: function (argume) {
+			fillProduct(argume);
+		}
+		});
+	});
+	$('.men').click(function (argument) {
+		$.ajax({
+			url: "http://acadprojects.com/py/fabricKart/filter/items",
+			type: "POST",
+			beforeSend: function (arg) {
+				arg.setRequestHeader("content-type", "application/json");
+			},
+			data: JSON.stringify({
+				"page":0,
+				"filters":[
+				{
+					"name":"gender",
+					"value":"male"
+				}
+				]
+		}),
+		success: function (argume) {
+			fillProduct(argume);
+		}
+		});
+	});
+	$('.women').click(function (argument) {
+		$.ajax({
+			url: "http://acadprojects.com/py/fabricKart/filter/items",
+			type: "POST",
+			beforeSend: function (arg) {
+				arg.setRequestHeader("content-type", "application/json");
+			},
+			data: JSON.stringify({
+				"page":0,
+				"filters":[
+				{
+					"name":"gender",
+					"value":"female"
+				}
+				]
+		}),
+		success: function (argume) {
+			fillProduct(argume);
+		}
+		});
+	});
+	$('.Kid').click(function (argument) {
+		$.ajax({
+			url: "http://acadprojects.com/py/fabricKart/filter/items",
+			type: "POST",
+			beforeSend: function (arg) {
+				arg.setRequestHeader("content-type", "application/json");
+			},
+			data: JSON.stringify({
+				"page":0,
+				"filters":[
+				{
+					"name":"gender",
+					"value":"kid"
 				}
 				]
 		}),
@@ -179,3 +244,23 @@ function closeNav() {
           map: map
         });
       }
+// $('.selll-button').click(function (argument) {
+// 	$.ajax({
+// 		url: "http://acadprojects.com/py/fabricKart/sell",
+// 		type: "POST",
+// 		beforeSend: function (arg) {
+// 				arg.setRequestHeader("content-type", "application/json");
+// 			},
+// 			data: JSON.stringify({
+// 				"item_name":
+// 				 "brand":
+// 				 "gender":
+// 				 "size":
+// 				 "quantity":
+// 				 "item_category":
+// 				 "price":
+// 				 "image":
+// 				 "description":
+// 				 "sold_by":
+// 	})	
+// })
